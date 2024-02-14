@@ -1,0 +1,16 @@
+name: 'Publish Release GitHub'
+description: 'Publish Release GitHub'
+author: 'Grzegorz Krukowski'
+branding:
+  color: green
+  icon: tag
+inputs:
+  tag_name:
+    description: 'The tag of the release to publish'
+    required: true
+  token:
+    description: 'The Github token used for authentication.'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
